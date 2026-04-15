@@ -21,7 +21,7 @@ body {
     padding: 2.4vw;
     background-color: #1b2233;
     border: 1px solid #2A334A;
-    border-left: 3px solid #FF6B6B;
+    border-left: 4px solid #FF6B6B;
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -161,6 +161,26 @@ h2{
     color: #a3aec2;
     margin-top: 0.25rem;
     line-height: 1.5;
+    max-height: 2rem;
+    overflow: hidden;
+    transition: max-height 0.38s ease-in-out; /* Smooth animation */
+}
+
+#test-todo-description.expanded{
+  
+    position: relative;
+    max-height: 31.25rem;
+}
+
+.collapsed-description{
+    background: none;
+    border: none;
+    color:#60a5fa;
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 0.125rem 0;
+    margin-top: 0.125rem;
+    font-weight: 500;
 }
 
 .card_footer{
@@ -219,6 +239,100 @@ ul {
     height: 1.16rem;
     fill: none;
     stroke: #4ADE80;
+}
+
+.edit-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+#error-message{
+    color: #e63946;
+    background: #ffe6e6;
+    border: 1px solid #e63946;
+    padding: 0.625rem;
+    border-radius: 8px;
+    margin-bottom: 0.938rem;
+    font-size: 0.875rem;
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(-0.875rem);
+    }
+
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+label{
+    font-size: 0.75rem;
+    color: #a3aec2;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+input[type="text"], textarea, select, input[type="datetime-local"]{
+    padding: 0.5rem 0.625rem;
+    border: 1px solid #2a334a;
+    border-radius: 8px;
+    background-color: #151d2e;
+    color: #e5eaf3;
+    font-size: 0.813rem;
+    font-family: inherit;
+}
+
+textarea{
+    resize: vertical;
+    min-height: 3.75rem;
+}
+
+.row{
+    display: flex;
+    gap: 0.625rem;
+}
+
+.row>label{
+    flex: 1;
+}
+
+select{
+    appearance: none;
+    cursor: pointer;
+}
+
+.edit-action-buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.625rem;
+    margin-top: 0.25rem;
+}
+
+.btn{
+    padding: 0.438rem 1.125rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.813rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancel-btn{
+    background-color: #2a334a;
+    color: #a3aec2;
+}
+
+.save-btn{
+    background-color: #22d3a6;
+    color: #121826;
 }
 
  @media(max-width:720px){
