@@ -23,7 +23,7 @@ closeEditForm.addEventListener('click', () => {
 
 //to toggle description text expansion
 const description = document.getElementById('test-todo-description');
-const btn = document.getElementById('toggleBtn');
+const btn = document.getElementById('test-todo-expand-toggle');
 
 btn.addEventListener('click', () => {
     description.classList.toggle('expanded');
