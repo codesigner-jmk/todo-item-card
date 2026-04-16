@@ -46,12 +46,13 @@
 
             <div class="card_body">
 
-            <h2 id="test-todo-title">Review Quarterly Analytics Report</h2>
-            <p class="main-text collapsed" id="test-todo-description">
-                Check conversion funnels and prepare summary slides for stakeholders. Include year-over-year comparison data and highlight anomalies. Also Finalize UI, review UX flow, and prepare assets for dev handoff.
-            </p>
-            <button class="collapsed-description" id="test-todo-expand-toggle" aria-expanded="false">Show more</button>
-
+                <h2 id="test-todo-title">Review Quarterly Analytics Report</h2>
+                <div id="test-todo-collapsible-section">
+                    <p class="main-text collapsed" id="test-todo-description">
+                        Check conversion funnels and prepare summary slides for stakeholders. Include year-over-year comparison data and highlight anomalies. Also Finalize UI, review UX flow, and prepare assets for dev handoff.
+                    </p>
+                    <button class="collapsed-description" id="test-todo-expand-toggle" aria-expanded="false">Show more</button>
+                </div>
             </div>
 
             <div class="card_footer">
@@ -71,10 +72,11 @@
                 </div>
 
                 <div class="time-remaining">
-                    <svg class="clock" aria-label="clock icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(0 0 0)">
-                        <path d="M11.9985 13.2507V8.49455M10.4991 2.75H13.4991M17.6549 7.59451L19.5014 5.74805M19.998 13.2509C19.998 17.6687 16.4167 21.25 11.999 21.25C7.58128 21.25 4 17.6687 4 13.2509C4 8.83321 7.58128 5.25193 11.999 5.25193C16.4167 5.25193 19.998 8.83321 19.998 13.2509Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-
+                    <div id="test-todo-overdue-indicator">
+                        <svg class="clock" aria-label="clock icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(0 0 0)">
+                            <path d="M11.9985 13.2507V8.49455M10.4991 2.75H13.4991M17.6549 7.59451L19.5014 5.74805M19.998 13.2509C19.998 17.6687 16.4167 21.25 11.999 21.25C7.58128 21.25 4 17.6687 4 13.2509C4 8.83321 7.58128 5.25193 11.999 5.25193C16.4167 5.25193 19.998 8.83321 19.998 13.2509Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <time id="test-todo-time-remaining">Due in 3 days</time>
                 </div>
 
